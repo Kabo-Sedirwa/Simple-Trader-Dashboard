@@ -19,7 +19,7 @@ public class DashboardController implements Initializable{
     public Label EURUSD_label,EURCAD_Label,nycTime,londonTime,beijingTime,sydneyTime,joburgTime;
 
     @FXML
-    private AnchorPane marketsPanel,currencyPanel,botswanaCompaniesPanel,usdPanel,euroPanel,cadPanel;
+    private AnchorPane currencyPanel,botswanaCompaniesPanel,usdPanel,euroPanel;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -33,14 +33,11 @@ public class DashboardController implements Initializable{
         };
         Timer timer = new Timer();
 
-        // schedules the task to be run in an interval
-        timer.scheduleAtFixedRate(task, 0,60000);
+        // schedules the task to be run in an 10th of a second interval
+        timer.scheduleAtFixedRate(task, 0,100);
     }
 
-    public void showMarketPane(){
 
-        marketsPanel.toFront();
-    }
 
     public void showCurrenciesPane(){
 
@@ -52,7 +49,7 @@ public class DashboardController implements Initializable{
         botswanaCompaniesPanel.toFront();
     }
 
-    //Currency Panel buttons
+    //Currency navigation panel buttons
 
     public void showUSD(){
 
@@ -65,10 +62,6 @@ public class DashboardController implements Initializable{
         euroPanel.toFront();
     }
 
-     public void showCAD(){
-
-        cadPanel.toFront();
-    }
 
     private void updateEuroLabels(){
 

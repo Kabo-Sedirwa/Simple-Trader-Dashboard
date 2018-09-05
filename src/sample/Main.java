@@ -9,9 +9,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.util.Timer;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
+
 
 public class Main extends Application {
 
@@ -21,13 +19,14 @@ public class Main extends Application {
 
         Currency currencyObj = new Currency();
         internationalTime intTimeObj = new internationalTime();
-        DashboardController dashObj = new DashboardController();
 
+        //Get instance every 10th of a second.(This is for the clocks on the dashboard to be updated)
         Timer timer1 = new Timer();
-        timer1.schedule(intTimeObj, 0, 1000);
+        timer1.schedule(intTimeObj, 0, 100);
 
+        //Get the EUR based pairs every hour
         Timer timer = new Timer();
-        timer.schedule(currencyObj, 0, 60000);
+        timer.schedule(currencyObj, 0, 3600000);
 
 
 

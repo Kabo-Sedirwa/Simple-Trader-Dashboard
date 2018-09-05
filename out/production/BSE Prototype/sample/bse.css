@@ -1,0 +1,17 @@
+.button{
+-fx-width:100%;
+-fx-background-color:  #ffb31a;
+}
+.button:hover{
+  -fx-background-color: #ffaa00;
+}
+
+.currencyNav{
+
+ -fx-width:100%;
+
+}
+.currencyNav:hover{
+  -fx-background-color:  #ff9900;
+}
+

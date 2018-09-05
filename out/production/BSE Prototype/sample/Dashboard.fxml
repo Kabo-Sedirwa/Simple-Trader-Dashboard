@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="1164.0" stylesheets="@bse.css" AnchorPane.leftAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DashboardController">
+   <children>
+      <AnchorPane prefHeight="546.0" prefWidth="249.0" style="-fx-background-color: #ffb31a;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="249.0" style="-fx-background-color: #ffc34d;">
+               <children>
+                  <Label prefHeight="100.0" prefWidth="256.0" style="-fx-background-color: #cc8800;" text="Dashboard" textFill="#170303">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox id="marketsButton" fx:id="marketsButton" layoutX="6.0" layoutY="100.0" onMouseClicked="#showMarketPane" prefHeight="57.0" prefWidth="238.0" styleClass="button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/market.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="49.0" prefWidth="176.0" text="Markets">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="currencyButton" layoutY="157.0" onMouseClicked="#showCurrenciesPane" prefHeight="57.0" prefWidth="249.0" styleClass="button">
+               <children>
+                  <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/sterling.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="59.0" prefWidth="181.0" text="Currencies">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="botswanaCompaniesButton" layoutY="214.0" onMouseClicked="#showBotswanaCompaniesPane" prefHeight="57.0" prefWidth="249.0" styleClass="button">
+               <children>
+                  <ImageView fitHeight="37.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/botswana.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="59.0" prefWidth="181.0" text="Botswana Companies">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="249.0" prefHeight="100.0" prefWidth="611.0" style="-fx-background-color: #ffb31a;" AnchorPane.leftAnchor="249.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane layoutY="5.0" prefHeight="90.0" prefWidth="915.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fitHeight="44.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/time.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets bottom="45.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <Label text="New York Time">
+                     <GridPane.margin>
+                        <Insets bottom="55.0" left="55.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nycTime" prefHeight="35.0" prefWidth="90.0" text="22:00">
+                     <GridPane.margin>
+                        <Insets left="55.0" top="20.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="44.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@../assets/time.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets bottom="45.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <ImageView fitHeight="44.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                     <image>
+                        <Image url="@../assets/time.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets bottom="45.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <Label text="London TIme" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="55.0" left="55.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Beijing Time" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="55.0" left="55.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label id="londonTime" fx:id="londonTime" prefHeight="35.0" prefWidth="90.0" text="22:00" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="55.0" top="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label id="beijingTime" fx:id="beijingTime" prefHeight="35.0" prefWidth="90.0" text="22:00" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="55.0" top="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Sydney Time" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="55.0" left="55.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ImageView fitHeight="44.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+                     <image>
+                        <Image url="@../assets/time.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets bottom="45.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <Label id="sydneyTime" fx:id="sydneyTime" prefHeight="35.0" prefWidth="90.0" text="22:00" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="55.0" top="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ImageView fitHeight="44.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+                     <image>
+                        <Image url="@../assets/time.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets bottom="45.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <Label text="Jo'Burg Time" GridPane.columnIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="55.0" left="55.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label id="joburgTime" fx:id="joburgTime" prefHeight="35.0" prefWidth="90.0" text="22:00" GridPane.columnIndex="4">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="55.0" top="20.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+         </children></AnchorPane>
+      <AnchorPane layoutX="249.0" layoutY="100.0" prefHeight="459.0" prefWidth="915.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="249.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <AnchorPane fx:id="botswanaCompaniesPanel" prefHeight="465.0" prefWidth="915.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="196.0" layoutY="90.0" text="market pane" textFill="#eeeeee" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="marketsPanel" prefHeight="465.0" prefWidth="915.0" style="-fx-background-color: #ffbb33;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane fx:id="currencyPanel" prefHeight="465.0" prefWidth="915.0" style="-fx-background-color: #ffbb33;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="29.0" layoutY="26.0" text="CURRENCY PANEL" />
+                  <AnchorPane prefHeight="71.0" prefWidth="915.0" style="-fx-background-color: #ffad33;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox onMouseClicked="#showUSD" prefHeight="86.0" prefWidth="200.0" styleClass="currencyNav">
+                           <children>
+                              <ImageView fitHeight="68.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/usd.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="15.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="USD">
+                                 <font>
+                                    <Font size="54.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="200.0" prefHeight="86.0" prefWidth="200.0">
+                           <children>
+                              <HBox onMouseClicked="#showEuro" prefHeight="86.0" prefWidth="200.0" styleClass="currencyNav">
+                                 <children>
+                                    <ImageView fitHeight="68.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/euro.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="15.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Label text="Euro">
+                                       <font>
+                                          <Font size="54.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="400.0" prefHeight="86.0" prefWidth="200.0">
+                           <children>
+                              <HBox onMouseClicked="#showCAD" prefHeight="86.0" prefWidth="200.0" styleClass="currencyNav">
+                                 <children>
+                                    <ImageView fitHeight="68.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/CAD.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="15.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Label text="CAD">
+                                       <font>
+                                          <Font size="54.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="cadPanel" layoutX="10.0" layoutY="96.0" prefHeight="382.0" prefWidth="915.0" style="-fx-background-color: #00b33c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
+                     <children>
+                        <Label layoutX="338.0" layoutY="106.0" text="Canadian Dollar" textFill="WHITE">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="86.0" fitWidth="200.0" layoutX="416.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="416.0" AnchorPane.rightAnchor="413.0">
+                           <image>
+                              <Image url="@../assets/CAD-White.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="367.0" layoutY="165.0" text="\$ 0.2235" textFill="WHITE">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="usdPanel" layoutY="92.0" prefHeight="373.0" prefWidth="915.0" style="-fx-background-color: #1aa3ff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
+                     <children>
+                        <ImageView fitHeight="76.0" fitWidth="150.0" layoutX="420.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/USD-White.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="383.0" layoutY="134.0" text="US Dollar" textFill="#f8f8f8">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="384.0" layoutY="173.0" text="\$0.2252" textFill="#fffefe">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="86.0" layoutY="216.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <AnchorPane layoutX="8.0" layoutY="244.0" prefHeight="76.0" prefWidth="915.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="244.0">
+                           <children>
+                              <HBox layoutX="-3.0" layoutY="1.0" prefHeight="86.0" prefWidth="217.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox prefHeight="76.0" prefWidth="72.0">
+                                       <children>
+                                          <Label text="USDEUR" textFill="#fffdfd">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" top="25.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <Label text="0.3265" textFill="WHITE">
+                                       <font>
+                                          <Font size="31.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="217.0" prefHeight="86.0" prefWidth="217.0">
+                                 <children>
+                                    <VBox prefHeight="76.0" prefWidth="72.0">
+                                       <children>
+                                          <Label text="USDGBP" textFill="#fffdfd">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" top="25.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <Label text="0.3265" textFill="WHITE">
+                                       <font>
+                                          <Font size="31.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="8.0" layoutY="219.0" text="USD Major Pairs" textFill="WHITE">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="euroPanel" layoutX="10.0" layoutY="96.0" prefHeight="382.0" prefWidth="915.0" style="-fx-background-color: #1a1aff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
+                     <children>
+                        <Label layoutX="408.0" layoutY="121.0" text="Euro" textFill="WHITE">
+                           <font>
+                              <Font size="43.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="408.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/Euro-White.png" />
+                           </image>
+                        </ImageView>
+                        <Separator layoutX="358.0" layoutY="235.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <Label layoutX="14.0" layoutY="238.0" text="Euro Major Pairs" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="1.0" layoutY="268.0" prefHeight="64.0" prefWidth="915.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="270.0">
+                           <children>
+                              <HBox prefHeight="82.0" prefWidth="200.0" style="-fx-background-color: #4d4dff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox prefHeight="62.0" prefWidth="66.0">
+                                       <children>
+                                          <Label text="EURUSD" textAlignment="CENTER" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets left="5.0" top="25.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="EURUSD_label" text="Kabo" textFill="#fcfcfc">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="200.0" prefHeight="82.0" prefWidth="200.0" style="-fx-background-color: #4d4dff;">
+                                 <children>
+                                    <VBox prefHeight="62.0" prefWidth="66.0">
+                                       <children>
+                                          <Label text="EURCAD" textAlignment="CENTER" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets left="5.0" top="25.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="EURCAD_Label" text="0.00" textFill="#fcfcfc">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

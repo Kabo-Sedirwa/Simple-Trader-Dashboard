@@ -437,6 +437,9 @@
                            </children>
                         </HBox>
                      </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </AnchorPane>
                </children>
             </AnchorPane>

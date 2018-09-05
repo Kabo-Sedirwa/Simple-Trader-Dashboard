@@ -33,27 +33,7 @@
                   </Label>
                </children>
             </HBox>
-            <HBox id="marketsButton" fx:id="marketsButton" layoutX="6.0" layoutY="100.0" onMouseClicked="#showMarketPane" prefHeight="57.0" prefWidth="238.0" styleClass="button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-               <children>
-                  <ImageView fitHeight="49.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/market.png" />
-                     </image>
-                  </ImageView>
-                  <Label prefHeight="49.0" prefWidth="176.0" text="Markets">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="35.0" />
-                     </HBox.margin>
-                     <padding>
-                        <Insets top="5.0" />
-                     </padding>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox fx:id="currencyButton" layoutY="157.0" onMouseClicked="#showCurrenciesPane" prefHeight="57.0" prefWidth="249.0" styleClass="button">
+            <HBox fx:id="currencyButton" layoutY="100.0" onMouseClicked="#showCurrenciesPane" prefHeight="57.0" prefWidth="249.0" styleClass="button">
                <children>
                   <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -70,7 +50,7 @@
                   </Label>
                </children>
             </HBox>
-            <HBox fx:id="botswanaCompaniesButton" layoutY="214.0" onMouseClicked="#showBotswanaCompaniesPane" prefHeight="57.0" prefWidth="249.0" styleClass="button">
+            <HBox fx:id="botswanaCompaniesButton" layoutY="157.0" onMouseClicked="#showBotswanaCompaniesPane" prefHeight="57.0" prefWidth="249.0" styleClass="button">
                <children>
                   <ImageView fitHeight="37.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -228,11 +208,6 @@
          </children></AnchorPane>
       <AnchorPane layoutX="249.0" layoutY="100.0" prefHeight="459.0" prefWidth="915.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="249.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <children>
-            <AnchorPane fx:id="botswanaCompaniesPanel" prefHeight="465.0" prefWidth="915.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <Label layoutX="196.0" layoutY="90.0" text="market pane" textFill="#eeeeee" />
-               </children>
-            </AnchorPane>
             <AnchorPane fx:id="marketsPanel" prefHeight="465.0" prefWidth="915.0" style="-fx-background-color: #ffbb33;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             <AnchorPane fx:id="currencyPanel" prefHeight="465.0" prefWidth="915.0" style="-fx-background-color: #ffbb33;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
@@ -283,51 +258,79 @@
                               </HBox>
                            </children>
                         </HBox>
-                        <HBox layoutX="400.0" prefHeight="86.0" prefWidth="200.0">
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="euroPanel" layoutX="10.0" layoutY="96.0" prefHeight="382.0" prefWidth="915.0" style="-fx-background-color: #1a1aff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
+                     <children>
+                        <Label layoutX="408.0" layoutY="121.0" text="Euro" textFill="WHITE">
+                           <font>
+                              <Font size="43.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="408.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/Euro-White.png" />
+                           </image>
+                        </ImageView>
+                        <Separator layoutX="358.0" layoutY="235.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <Label layoutX="14.0" layoutY="238.0" text="Euro Major Pairs" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="1.0" layoutY="268.0" prefHeight="64.0" prefWidth="915.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="270.0">
                            <children>
-                              <HBox onMouseClicked="#showCAD" prefHeight="86.0" prefWidth="200.0" styleClass="currencyNav">
+                              <HBox prefHeight="82.0" prefWidth="200.0" style="-fx-background-color: #4d4dff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <ImageView fitHeight="68.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../assets/CAD.png" />
-                                       </image>
+                                    <VBox prefHeight="62.0" prefWidth="66.0">
+                                       <children>
+                                          <Label text="EURUSD" textAlignment="CENTER" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets left="5.0" top="25.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
                                        <HBox.margin>
-                                          <Insets left="10.0" top="15.0" />
+                                          <Insets />
                                        </HBox.margin>
-                                    </ImageView>
-                                    <Label text="CAD">
+                                    </VBox>
+                                    <Label fx:id="EURUSD_label" text="Kabo" textFill="#fcfcfc">
                                        <font>
-                                          <Font size="54.0" />
+                                          <Font size="26.0" />
                                        </font>
                                        <HBox.margin>
-                                          <Insets top="10.0" />
+                                          <Insets left="5.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="200.0" prefHeight="82.0" prefWidth="200.0" style="-fx-background-color: #4d4dff;">
+                                 <children>
+                                    <VBox prefHeight="62.0" prefWidth="66.0">
+                                       <children>
+                                          <Label text="EURCAD" textAlignment="CENTER" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets left="5.0" top="25.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Label fx:id="EURCAD_Label" text="0.00" textFill="#fcfcfc">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="15.0" />
                                        </HBox.margin>
                                     </Label>
                                  </children>
                               </HBox>
                            </children>
-                        </HBox>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane fx:id="cadPanel" layoutX="10.0" layoutY="96.0" prefHeight="382.0" prefWidth="915.0" style="-fx-background-color: #00b33c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
-                     <children>
-                        <Label layoutX="338.0" layoutY="106.0" text="Canadian Dollar" textFill="WHITE">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="86.0" fitWidth="200.0" layoutX="416.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="416.0" AnchorPane.rightAnchor="413.0">
-                           <image>
-                              <Image url="@../assets/CAD-White.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="367.0" layoutY="165.0" text="\$ 0.2235" textFill="WHITE">
-                           <font>
-                              <Font size="41.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
+                        </AnchorPane>
+                     </children></AnchorPane>
                   <AnchorPane fx:id="usdPanel" layoutY="92.0" prefHeight="373.0" prefWidth="915.0" style="-fx-background-color: #1aa3ff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
                      <children>
                         <ImageView fitHeight="76.0" fitWidth="150.0" layoutX="420.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
@@ -405,77 +408,11 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="euroPanel" layoutX="10.0" layoutY="96.0" prefHeight="382.0" prefWidth="915.0" style="-fx-background-color: #1a1aff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
-                     <children>
-                        <Label layoutX="408.0" layoutY="121.0" text="Euro" textFill="WHITE">
-                           <font>
-                              <Font size="43.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="408.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../assets/Euro-White.png" />
-                           </image>
-                        </ImageView>
-                        <Separator layoutX="358.0" layoutY="235.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                        <Label layoutX="14.0" layoutY="238.0" text="Euro Major Pairs" textFill="WHITE">
-                           <font>
-                              <Font size="25.0" />
-                           </font>
-                        </Label>
-                        <AnchorPane layoutX="1.0" layoutY="268.0" prefHeight="64.0" prefWidth="915.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="270.0">
-                           <children>
-                              <HBox prefHeight="82.0" prefWidth="200.0" style="-fx-background-color: #4d4dff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <children>
-                                    <VBox prefHeight="62.0" prefWidth="66.0">
-                                       <children>
-                                          <Label text="EURUSD" textAlignment="CENTER" textFill="WHITE">
-                                             <VBox.margin>
-                                                <Insets left="5.0" top="25.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                    </VBox>
-                                    <Label fx:id="EURUSD_label" text="Kabo" textFill="#fcfcfc">
-                                       <font>
-                                          <Font size="26.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets left="5.0" top="15.0" />
-                                       </HBox.margin>
-                                    </Label>
-                                 </children>
-                              </HBox>
-                              <HBox layoutX="200.0" prefHeight="82.0" prefWidth="200.0" style="-fx-background-color: #4d4dff;">
-                                 <children>
-                                    <VBox prefHeight="62.0" prefWidth="66.0">
-                                       <children>
-                                          <Label text="EURCAD" textAlignment="CENTER" textFill="WHITE">
-                                             <VBox.margin>
-                                                <Insets left="5.0" top="25.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                    </VBox>
-                                    <Label fx:id="EURCAD_Label" text="0.00" textFill="#fcfcfc">
-                                       <font>
-                                          <Font size="26.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets left="5.0" top="15.0" />
-                                       </HBox.margin>
-                                    </Label>
-                                 </children>
-                              </HBox>
-                           </children>
-                        </AnchorPane>
-                     </children></AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="botswanaCompaniesPanel" prefHeight="465.0" prefWidth="915.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="196.0" layoutY="90.0" text="market pane" textFill="#eeeeee" />
                </children>
             </AnchorPane>
          </children>

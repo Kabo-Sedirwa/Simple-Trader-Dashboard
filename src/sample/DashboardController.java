@@ -19,7 +19,7 @@ public class DashboardController implements Initializable{
     public Label EURUSD_label,EURCAD_Label,nycTime,londonTime,beijingTime,sydneyTime,joburgTime;
 
     @FXML
-    private AnchorPane currencyPanel,botswanaCompaniesPanel,usdPanel,euroPanel;
+    private AnchorPane currencyPanel,botswanaCompaniesPanel,euroPanel;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -49,13 +49,8 @@ public class DashboardController implements Initializable{
         botswanaCompaniesPanel.toFront();
     }
 
-    //Currency navigation panel buttons
+    //Currency navigation panel button
 
-    public void showUSD(){
-
-        usdPanel.toFront();
-
-    }
 
     public void showEuro(){
 

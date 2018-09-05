@@ -19,6 +19,7 @@ public class internationalTime extends TimerTask {
 
     }
 
+    //Get times of countries with major markets
 
     private void getCurrentShanghaiTime(){
         Date date = new Date();
@@ -64,6 +65,8 @@ public class internationalTime extends TimerTask {
 
     }
 
+
+    //Getters and setters
     public String getShanghaiTime() {
         return shanghaiTime;
     }

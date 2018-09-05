@@ -24,11 +24,13 @@ public class Currency extends TimerTask  {
     private void pullEuroPairs(){
 
         try {
+            //Make request to fixer io.
             URL url = new URL("http://data.fixer.io/api/latest?access_key=5bc175e4affec44777c4c7ad902cff9c");
 
+            //set up connection
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
-
+            // Reading json response and then appending it
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(con.getInputStream()));
 
@@ -39,11 +41,14 @@ public class Currency extends TimerTask  {
             while ((inputLine = in.readLine()) != null) {
                 response.append(inputLine);
 
+                //Json object to string for filtering to get desired pair.
                 JSONObject myResponse = new JSONObject(response.toString());
 
+                //Get EURCAD pair value
                 double EURCAD_value  = (double) myResponse.getJSONObject("rates").get("CAD");
                 setEURCAD(EURCAD_value);
 
+                //Get EURUSD pair value
                 double EURUSD_value  = (double) myResponse.getJSONObject("rates").get("USD");
                 setEURUSD(EURUSD_value);
             }
@@ -54,7 +59,7 @@ public class Currency extends TimerTask  {
     }
 
 
-
+    //Getters and Setters
 
     public static double getEURUSD() {
         return EURUSD;

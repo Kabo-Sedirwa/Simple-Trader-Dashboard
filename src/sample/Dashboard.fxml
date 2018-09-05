@@ -410,9 +410,34 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="botswanaCompaniesPanel" prefHeight="465.0" prefWidth="915.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="botswanaCompaniesPanel" prefHeight="465.0" prefWidth="915.0" style="-fx-background-color: #cc8800;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Label layoutX="196.0" layoutY="90.0" text="market pane" textFill="#eeeeee" />
+                  <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="306.0" prefWidth="256.0">
+                     <children>
+                        <HBox layoutY="132.0" prefHeight="35.0" prefWidth="256.0" style="-fx-background-color: #ffeecc;">
+                           <children>
+                              <Label text="Coin Base PTY (LTD)">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ImageView fitHeight="132.0" fitWidth="256.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../assets/jiggaCoin.png" />
+                           </image>
+                        </ImageView>
+                        <HBox layoutY="167.0" prefHeight="144.0" prefWidth="256.0" style="-fx-background-color: #ffcc66;">
+                           <children>
+                              <Label prefHeight="45.0" prefWidth="251.0" text="This company has been blah blah blah" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
          </children>

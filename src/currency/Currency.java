@@ -55,6 +55,8 @@ public class Currency extends TimerTask  {
             in.close();
         }  catch (IOException e) {
             e.printStackTrace();
+
+            System.out.println("No internet connection , please reconnect to pull data from Fixer.io");
         }
     }
 
